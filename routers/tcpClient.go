@@ -8,6 +8,11 @@ import (
 	"strings"
 )
 
+var poster struct {
+	a int
+	b int32
+}
+
 func main() {
 	arguments := os.Args
 	if len(arguments) == 1 {
