@@ -1,12 +1,13 @@
-# restapi
+#  restapi
+## solved :
 
 solved https://www.e-olymp.com/en/problems/6033/statistics - 1
 
 solved red black tree implementation - 2
 
-** In-Progress : **
+## In-Progress :
 
-A skip list (structure) in two methods , representing a skip-list with two different implementations 
+A **skip list** (structure) in two methods , representing a skip-list with two different implementations 
 I've observed that a skip list looks similar to a balanced tree of similar height. so this can imply that a balanced tree can be simply flipped to represent a fast but more memory intense skip-list. 
 
 - Method (A) :
