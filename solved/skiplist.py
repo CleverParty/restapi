@@ -5,6 +5,11 @@ import sys
 import math
 from random import gauss
 
+
+def printit(curr_node):
+    while curr_node.nextval != None :
+        print("the values are :\n",curr_node.store)
+
 class Node(object):
     name  = ""
     def __init__(self, level , store):
@@ -29,7 +34,7 @@ class skiplist(object):
         self.head.nextval = None
 
     def printvalue(self):
-        print("the value in this node is : ",self.head.store)
+        print("the value in this node is : ",self.level)
 
     def create(self, level , key):
         obj = Node(level,key)
@@ -44,22 +49,16 @@ class skiplist(object):
         curr_node.nextval = None
         curr_node.level = 1
         if(self.head.nextval != curr_node or self.head.nextval != None):
-            self.head.nextval = curr_node
-
-
-    def print(self):
-        while self.next != None :
-            print("the printed tsructure is : ", self.value)
-
-
+            self.head.nextval = curr_node   
         """for index in range(0, self.level + 1):
             while(curr_node.next_level and curr_node.value < self.value):
                 curr_node = curr_node.next
             print(curr_node.store)"""
 
-
-list = skiplist(1,11)
+node_test = Node(1,18)
+list = skiplist(1,10)
+print(list.printvalue())
 list.insertNode(2)
 list.insertNode(3)
-list.print()
-print(list.print())
+head = list.create(1,19)
+printit(head)
