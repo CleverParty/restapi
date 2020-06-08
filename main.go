@@ -67,7 +67,7 @@ func getOneEvent(w http.ResponseWriter, r *http.Request) {
 func getAllEvents(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(events)
 }
-
+#have to add functionalties to main file
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", homeLink)
