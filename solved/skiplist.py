@@ -10,9 +10,10 @@ class Node(object):
     def __init__(self, level , store):
         self.name = 'Node'
         self.store = store
-        self.next_level = [None]*(level+1)
+        # self.next_level = None
         self.level = level
         self.nextval = None
+
     def printValue(self):
         print("the value in this particular node is : ",self.store)
 
@@ -39,11 +40,17 @@ class skiplist(object):
 
     def insertNode(self,value):
         curr_node = self.create(self.level,value)
-        if(self.head.nextval != curr_node and self.head.nextval != None):
-            self.head.nextval = curr_node
-        curr_node.nextval = None
         curr_node.store = value
+        curr_node.nextval = None
         curr_node.level = 1
+        if(self.head.nextval != curr_node or self.head.nextval != None):
+            self.head.nextval = curr_node
+
+
+    def print(self):
+        while self.next != None :
+            print("the printed tsructure is : ", self.value)
+
 
         """for index in range(0, self.level + 1):
             while(curr_node.next_level and curr_node.value < self.value):
@@ -53,4 +60,6 @@ class skiplist(object):
 
 list = skiplist(1,11)
 list.insertNode(2)
-print(list.printvalue())
+list.insertNode(3)
+list.print()
+print(list.print())
