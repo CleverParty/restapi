@@ -3,31 +3,54 @@ from __future__ import absolute_import, print_function
 import os
 import sys
 import math
-from random import randint
+from random import gauss
 
 class Node(object):
     name  = ""
-    def __init__(self, key , level):
-        self.name = 'name'
-        self.key = key
+    def __init__(self, level , store):
+        self.name = 'Node'
+        self.store = store
         self.next_level = [None]*(level+1)
         self.level = level
+        self.nextval = None
+    def printValue(self):
+        print("the value in this particular node is : ",self.store)
 
 class skiplist(object):
     name = ""
     def __init__(self,value,max):
-        self.name = 'inner'
+        self.name = 'skiplist'
         self.max = max
         self.value = value
         self.level = 0
+        self.next = None
+        self.head = self.create(self.level,-1)
+        self.head.nextval = None
+
+    def printvalue(self):
+        print("the value in this node is : ",self.head.store)
 
     def create(self, level , key):
         obj = Node(level,key)
         return obj
+
     def randomize(self):
-        value = randint(int(self.level) - 1, int(self.max) - 1)
+        value = gauss(int(self.level) - 1, int(self.max) - 1)
+
+    def insertNode(self,value):
+        curr_node = self.create(self.level,value)
+        if(self.head.nextval != curr_node and self.head.nextval != None):
+            self.head.nextval = curr_node
+        curr_node.nextval = None
+        curr_node.store = value
+        curr_node.level = 1
+
+        """for index in range(0, self.level + 1):
+            while(curr_node.next_level and curr_node.value < self.value):
+                curr_node = curr_node.next
+            print(curr_node.store)"""
 
 
-node_a = Node(1,1)
-list = skiplist(1,10)
-list.create(1,1)
+list = skiplist(1,11)
+list.insertNode(2)
+print(list.printvalue())
