@@ -1,6 +1,7 @@
 # restapi
 
-solved https://www.e-olymp.com/en/problems/6033/statistics - 1 
+solved https://www.e-olymp.com/en/problems/6033/statistics - 1
+
 solved red black tree implementation - 2
 
 In-Progress :
