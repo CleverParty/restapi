@@ -50,10 +50,10 @@ class skiplist(object):
         curr_node.level = 1
         if(self.head.nextval != curr_node or self.head.nextval != None):
             self.head.nextval = curr_node   
-        """for index in range(0, self.level + 1):
-            while(curr_node.next_level and curr_node.value < self.value):
-                curr_node = curr_node.next
-            print(curr_node.store)"""
+        for index in range(0, self.level + 1):
+            while(curr_node.nextval and curr_node.value < self.value):
+                curr_node = curr_node.nextval
+            print("the value of the index is :",index)
 
 node_test = Node(1,18)
 list = skiplist(1,10)
