@@ -54,6 +54,8 @@ class skiplist(object):
             while(curr_node.nextval and curr_node.value < self.value):
                 curr_node = curr_node.nextval
             print("the value of the index is :",index)
+            if(curr_node.nextval == None ):
+                print("reached end of list")
 
 node_test = Node(1,18)
 list = skiplist(1,10)
