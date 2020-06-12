@@ -23,5 +23,5 @@ class Trielist:
 
 values = ["aba","abba","acca"]
 trie = Trielist()
-for key in keys:
-    trie.Insert(key)
+for val in values:
+    trie.Insert(val)
