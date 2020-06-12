@@ -19,7 +19,8 @@ class Node(object):
         self.level = level
         self.nextval = None
 
-    def printValue(self):
+    def printStore(self):
+
         print("the value in this particular node is : ",self.store)
 
 class skiplist(object):
@@ -54,6 +55,10 @@ class skiplist(object):
             while(curr_node.nextval and curr_node.value < self.value):
                 curr_node = curr_node.nextval
             print("the value of the index is :",index)
+            if(curr_node.nextval == None ):
+                print("reached end of list")
+
+    def printValues
 
 node_test = Node(1,18)
 list = skiplist(1,10)
