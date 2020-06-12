@@ -1,11 +1,11 @@
-import numpy as np 
+import numpy as np
 
 class two:
     def __init__(self,first=1,second=2):
         print("the two node init")
-        self.first = first  
+        self.first = first
         self.second = second
-    def print(self):
+    def printStore(self):
         print("values stored are : {first} and {second} ".format(first = self.first, second = self.second))
 
 class three:
@@ -18,5 +18,4 @@ class four:
 
 
 check=two(1,2)
-check.print()
-
+check.printStore()
