@@ -69,5 +69,6 @@ class redblack():
 rb = redblack()
 rb.insert(1)
 rb.insert(23)
+rb.insert(12)
 rb.insert(90)
 rb.print_preorder()
