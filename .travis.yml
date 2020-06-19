@@ -1,0 +1,13 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.5"
+  - "3.8"
+
+install: pip3 install --upgrade pip
+
+virtualenv:
+  system_site_packages: true
+
+script: python3 tcpClient.py || python tcpClient.py
