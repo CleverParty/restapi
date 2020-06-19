@@ -8,12 +8,13 @@ import (
 	"strings"
 )
 
-var poster struct {
+type poster struct {
 	a int
 	b int32
 }
 
 func main() {
+	fmt.Println(poster{12, 625})
 	arguments := os.Args
 	if len(arguments) == 1 {
 		fmt.Println("Please provide host:port.")
@@ -35,7 +36,7 @@ func main() {
 
 		message, _ := bufio.NewReader(c).ReadString('\n')
 		fmt.Print("->: " + message)
-		if strings.TrimSpace(string(text)) == "STOP" {
+		if strings.TrimSpace(string(text)) == "EXIT" {
 			fmt.Println("TCP client exiting...")
 			return
 		}
