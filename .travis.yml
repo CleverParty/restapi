@@ -1,9 +1,12 @@
 language: python
-
 python:
+  - "3.6.7"
   - "3.7"
   - "3.7.1"
-
+os: 
+  - osx
+before_install:
+  - python --version
 script: 
   - cd /home/travis/build/CleverParty/restapi/solved
   - make project
