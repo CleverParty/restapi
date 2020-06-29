@@ -2,4 +2,5 @@ project:
 	echo "Running golang files"
 
 pyth:
-	python server/Kastenlauf.py
+	cd ~/server
+	python Kastenlauf.py
