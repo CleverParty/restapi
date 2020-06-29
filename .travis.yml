@@ -4,7 +4,6 @@ python:
   - "3.7"
   - "3.7.1"
 
-script: python tcpClient.py
-branches:
-  only:
-    - master
+script: 
+  - make project
+  - make pyth
