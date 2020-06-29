@@ -2,5 +2,5 @@ project:
 	echo "Running golang files"
 
 pyth:
-	pwd
-	python Kastenlauf.py
+	cd /home/travis/build/CleverParty/restapi/solved
+	python3 Kastenlauf.py
