@@ -1,17 +1,22 @@
-FROM golang:alpine
+# For more information, please refer to https://aka.ms/vscode-docker-python
+FROM python:3.8-slim-buster
 
-# Set necessary environmet variables needed for our image
-ENV GO111MODULE=on \
-    CGO_ENABLED=0 \
-    GOOS=linux \
-    GOARCH=amd64
+# Keeps Python from generating .pyc files in the container
+ENV PYTHONDONTWRITEBYTECODE 1
 
-RUN go get github.com/gorilla/mux
-RUN go build -o .
+# Turns off buffering for easier container logging
+ENV PYTHONUNBUFFERED 1
 
+# Install pip requirements
+ADD requirements.txt .
+RUN python -m pip install -r requirements.txt
 
-RUN cp /build/main .
-EXPOSE 3007
+WORKDIR /app
+ADD . /app
 
-# Command to run when starting the container
-CMD ["/dist/main"]
+# Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
+RUN useradd appuser && chown -R appuser /app
+USER appuser
+
+# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
+CMD ["python", "solved/Kastenlauf.py"]
