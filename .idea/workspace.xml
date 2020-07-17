@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="250b4e84-480e-4959-81bd-941b54effb4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solved/redblack.py" beforeDir="false" afterPath="$PROJECT_DIR$/solved/redblack.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +37,7 @@
   <component name="ProjectId" id="1d1N8LMU57oU0Uo55gq20wf7t9J" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lets-Golang-" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -96,6 +95,7 @@
       <workItem from="1591602156259" duration="606000" />
       <workItem from="1591721461241" duration="894000" />
       <workItem from="1591833790919" duration="4746000" />
+      <workItem from="1591993573028" duration="425000" />
     </task>
     <servers />
   </component>
