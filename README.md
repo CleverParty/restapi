@@ -1,4 +1,4 @@
-#  restapi
+#  restapi [![Build Status](https://travis-ci.org/CleverParty/restapi.svg?branch=master)](https://travis-ci.org/CleverParty/restapi)
 ## solved :
 
 solved https://www.e-olymp.com/en/problems/6033/statistics - 1

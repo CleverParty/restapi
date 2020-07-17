@@ -1,7 +1,7 @@
 project:
-	echo "Running golang files"
+	echo "Running python file (Kastenlauf.py) "
 
 pyth:
-	python3 solved/Kastenlauf.py
+	python3 solved/Kastenlauf.py < testing.txt
 
   

@@ -21,10 +21,10 @@ def emotion(x,num):
             index = index_x +index_y
             print("manhatten distance is : ",manhatten_dist)
             if(manhatten_dist <= 1000): # because for the students to be happy they should satisify the 50 meters for every beer so that comes about to 1000 meter for every crate of 20 beers
-                return("happy",index_x,index_y)
+                return("User is happy",index_x,index_y)
                 continue
             else:
-                return("sad",index_x,index_y)
+                return("User is sad",index_x,index_y)
                 break
 # 2 3 0 0 1000 0 1000 1000 2000 1000 3000 2000
 num = x[0]
